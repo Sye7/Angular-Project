@@ -1,0 +1,29 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div>
+            <a routerLink="/home" class="navbar-brand">Todo App</a>
+        </div>
+
+        <ul class="navbar-nav">
+            <li>
+                <a *ngIf="hardcodedAuth.isUserLogin()" routerLink="/welcome/Itachi Sama" class="nav-link">Home</a>
+            </li>
+
+            <li>
+                <a  *ngIf="hardcodedAuth.isUserLogin()"routerLink="/todo" class="nav-link">Todos</a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li>
+                <a *ngIf="!hardcodedAuth.isUserLogin()" routerLink="/login" class="nav-link">Login</a>
+            </li>
+
+            <li>
+                <a  *ngIf="hardcodedAuth.isUserLogin()" routerLink="/logout" class="nav-link">Logout</a>
+            </li>
+        </ul>
+
+
+    </nav>
+    </header>
